@@ -77,7 +77,7 @@ extension NSDate
 	}
 	
 	var second:Int?
-	{
+		{
 		get
 		{
 			let formatter = NSDateFormatter()
@@ -95,7 +95,7 @@ extension NSDate
 	}
 	
 	var firstDayOfMonth:NSDate?
-	{
+		{
 		get
 		{
 			var exceptDayFormat = ""
@@ -132,7 +132,7 @@ extension NSDate
 	}
 	
 	var lastDayOfMonth:NSDate?
-	{
+		{
 		get
 		{
 			if(self.month != nil)

@@ -11,21 +11,21 @@ import NotificationCenter
 
 class TodayViewController: NSViewController, NCWidgetProviding {
 	
-    override var nibName: String? {
-        return "TodayViewController"
-    }
+	override var nibName: String? {
+		return "TodayViewController"
+	}
 	/** enable this when test constraint
 	override func viewDidLoad() {
-		NSUserDefaults.standardUserDefaults().setBool(true, forKey: "NSConstraintBasedLayoutVisualizeMutuallyExclusiveConstraints")
+	NSUserDefaults.standardUserDefaults().setBool(true, forKey: "NSConstraintBasedLayoutVisualizeMutuallyExclusiveConstraints")
 	}
 	*/
-
-    func widgetPerformUpdateWithCompletionHandler(completionHandler: ((NCUpdateResult) -> Void)!) {
-        // Update your data and prepare for a snapshot. Call completion handler when you are done
-        // with NoData if nothing has changed or NewData if there is new data since the last
-        // time we called you
-        completionHandler(.NoData)
-    }
+	
+	func widgetPerformUpdateWithCompletionHandler(completionHandler: ((NCUpdateResult) -> Void)!) {
+		// Update your data and prepare for a snapshot. Call completion handler when you are done
+		// with NoData if nothing has changed or NewData if there is new data since the last
+		// time we called you
+		completionHandler(.NoData)
+	}
 	
 	var weekdaySymbols = ["日", "一", "二", "三", "四", "五", "六"]
 	var currentViewMonth:NSDate?
@@ -60,14 +60,14 @@ class TodayViewController: NSViewController, NCWidgetProviding {
 		
 		monthViewlines.append(addTitleLine(weekdaySymbols))
 		monthViewlines.appendContentsOf(makeDateLines(getMonthDateStrings(month)))
-		
+		/*
 		if(viewHeightConstraint == nil)
 		{
 			let height = CGFloat(monthViewlines.count * 30 + monthViewlines.count - 1)
 			viewHeightConstraint = NSLayoutConstraint(item: self.view, attribute: .Height, relatedBy: .Equal, toItem: nil, attribute: .NotAnAttribute, multiplier: 1.0, constant: height)
 			self.view.addConstraint(viewHeightConstraint!)
 		}
-		
+		*/
 		for(var i = 0; i < monthViewlines.count; ++i)
 		{
 			self.view.addSubview(monthViewlines[i])
@@ -296,7 +296,7 @@ class TodayViewController: NSViewController, NCWidgetProviding {
 			++i
 		}
 		dateStrings.append(line)
-
+		
 		return dateStrings
 	}
 	
