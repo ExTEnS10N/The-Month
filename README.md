@@ -1,4 +1,9 @@
 # The-Month
+  
+####Update
+_2015-12-6_  
+Fix the bug while pressing Next month on December And Previous month on January  
+  
 ####简介 (INTRODUCTION)
 This is a MONTH CALENDAR That runs on Mac OS X Notification Center  
 这是一个Mac OS X通知中心月历插件  
@@ -13,6 +18,6 @@ Then run widget form xcode press the round green "+" button in the simulator and
 有个潜在的问题可能阻止插件在真实通知中运行。  
 因此你最好新建一个project,再复制Swift代码进去。  
 然后再xcode中启动插件，点击模拟器中的圆形绿色“+”按钮，然后在终端中执行killall Xcode  
-
-####License
-GNU GPL
+  
+####License  
+GNU GPL  
