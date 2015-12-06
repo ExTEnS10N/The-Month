@@ -60,14 +60,7 @@ class TodayViewController: NSViewController, NCWidgetProviding {
 		
 		monthViewlines.append(addTitleLine(weekdaySymbols))
 		monthViewlines.appendContentsOf(makeDateLines(getMonthDateStrings(month)))
-		/*
-		if(viewHeightConstraint == nil)
-		{
-			let height = CGFloat(monthViewlines.count * 30 + monthViewlines.count - 1)
-			viewHeightConstraint = NSLayoutConstraint(item: self.view, attribute: .Height, relatedBy: .Equal, toItem: nil, attribute: .NotAnAttribute, multiplier: 1.0, constant: height)
-			self.view.addConstraint(viewHeightConstraint!)
-		}
-		*/
+		
 		for(var i = 0; i < monthViewlines.count; ++i)
 		{
 			self.view.addSubview(monthViewlines[i])
@@ -86,10 +79,26 @@ class TodayViewController: NSViewController, NCWidgetProviding {
 			--year
 			break
 		case "<":
-			--month
+			if(month == 1)
+			{
+				--year
+				month = 12
+			}
+			else
+			{
+				--month
+			}
 			break
 		case ">":
-			++month
+			if(month == 12)
+			{
+				++year
+				month = 1
+			}
+			else
+			{
+				++month
+			}
 			break
 		case ">>":
 			++year
