@@ -1,14 +1,14 @@
-# The-Month
+# The-Month  
   
-####Update
+####Update  
 _2015-12-6_  
 Fix the bug while pressing Next month on December And Previous month on January  
   
-####简介 (INTRODUCTION)
+####简介 (INTRODUCTION)  
 This is a MONTH CALENDAR That runs on Mac OS X Notification Center  
 这是一个Mac OS X通知中心月历插件  
-It’s beautiful, simple and modern (compared with the one in Dashboard) 
-它美观，简约现代(和DashBoard里那个相比)
+It’s beautiful, simple and modern (compared with the one in Dashboard)  
+它美观，简约现代(和DashBoard里那个相比)  
 ![Preview](https://raw.githubusercontent.com/ExTEnS10N/The-Month/master/preview.png)  
   
 ####注意 (ATTENSION)⚠️  
